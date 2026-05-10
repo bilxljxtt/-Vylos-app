@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import openai
+import google.generativeai as genai
 from supabase import create_client, Client
 
 st.set_page_config(page_title="Anti-Gravity Questionnaire", page_icon="🚀", layout="centered")
@@ -20,4 +20,4 @@ with st.form("questionnaire_form"):
     submitted = st.form_submit_button("Submit Answers")
     if submitted:
         st.success("Your answers have been submitted successfully! We are processing your results.")
-        # Future Logic: Send data to OpenAI and save results in Supabase
+        # Future Logic: Send data to Google AI and save results in Supabase
